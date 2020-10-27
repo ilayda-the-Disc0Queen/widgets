@@ -5,10 +5,10 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('some url')
-      .then((response) => {
-        console.log(response.data);
-      });
+    const searchApi = asycnc () => {
+      await axios.get('api url');
+    };
+    searchApi();
   }, [searchTerm]);
 
   return (
